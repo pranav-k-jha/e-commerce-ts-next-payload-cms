@@ -11,9 +11,7 @@ export async function Footer() {
 
   try {
     footer = await fetchFooter()
-  } catch (error) {
-    console.error('Failed to fetch footer data:', error)
-  }
+  } catch (error) {}
   const navItems = footer?.navItems || []
 
   return (
