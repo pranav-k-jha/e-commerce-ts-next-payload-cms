@@ -33,7 +33,7 @@ const Promotion = () => {
     }, 1000)
 
     return () => {
-      clearInterval(timerInterval) 
+      clearInterval(timerInterval)
     }
   }, [targetDate])
   return (
@@ -55,6 +55,7 @@ const Promotion = () => {
     </section>
   )
 }
+
 const StatBox = ({ label, value }: { label: string; value: number }) => (
   <li className={classes.statBox}>
     <h4>{value}</h4>
