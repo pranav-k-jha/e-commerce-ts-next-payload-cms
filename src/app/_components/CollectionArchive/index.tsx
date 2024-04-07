@@ -74,9 +74,6 @@ export const CollectionArchive: React.FC<Props> = props => {
   const isRequesting = useRef(false)
   const [page, setPage] = useState(1)
 
-  const categories = (categoryFilters || [])
-    .map(cat => (typeof cat === 'object' ? cat?.id : cat))
-    .join(',')
 
   const scrollToRef = useCallback(() => {
     const { current } = scrollRef
