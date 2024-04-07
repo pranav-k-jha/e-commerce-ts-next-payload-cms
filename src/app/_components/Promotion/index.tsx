@@ -12,8 +12,6 @@ const Promotion = () => {
     seconds: 0,
   })
 
-
-
   // Memoize the targetDate initialization to prevent it from changing on every render
   const targetDate = useMemo(() => new Date().setDate(new Date().getDate() + 3), [])
 
