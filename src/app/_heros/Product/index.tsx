@@ -56,7 +56,6 @@ export const ProductHero: React.FC<{
           </div>
           <p className={classes.stock}>In Stock</p>
         </div>
-      </div>
 
       <Price product={product} button={false} />
       <div className={classes.description}>
@@ -65,6 +64,7 @@ export const ProductHero: React.FC<{
       </div>
 
       <AddToCartButton product={product} className={classes.addToCartButton} />
+      </div>
     </Gutter>
   )
 }
