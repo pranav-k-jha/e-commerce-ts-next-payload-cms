@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 
 import classes from './index.module.scss'
 
@@ -12,8 +12,10 @@ const Promotion = () => {
     seconds: 0,
   })
 
-  const targetDate = new Date()
-  targetDate.setDate(targetDate.getDate() + 3)
+
+
+  // Memoize the targetDate initialization to prevent it from changing on every render
+  const targetDate = useMemo(() => new Date().setDate(new Date().getDate() + 3), [])
 
   useEffect(() => {
     const timerInterval = setInterval(() => {
@@ -36,7 +38,7 @@ const Promotion = () => {
     return () => {
       clearInterval(timerInterval) // Cleanup the interval when the component unmounts.
     }
-  }, [])
+  }, [targetDate])
   return (
     <section className={classes.promotion}>
       <div className={classes.textBox}>
@@ -47,10 +49,10 @@ const Promotion = () => {
           choices and amazing deals. Don't miss out! 🎁🛒
         </p>
         <ul className={classes.stats}>
-        <StatBox label="Days" value={time.days} />
-        <StatBox label="Hours" value={time.hours} />
-        <StatBox label="Minutes" value={time.minutes} />
-        <StatBox label="Seconds" value={time.seconds} />
+          <StatBox label="Days" value={time.days} />
+          <StatBox label="Hours" value={time.hours} />
+          <StatBox label="Minutes" value={time.minutes} />
+          <StatBox label="Seconds" value={time.seconds} />
         </ul>
       </div>
     </section>
