@@ -1,4 +1,6 @@
-# Payload E-Commerce Template
+# E-Commerce App in NEXT 14, Payload CMS and Strip with an Admin Dashboard
+
+##Currently under progress...
 
 This is the official [Payload E-Commerce Template](https://github.com/payloadcms/payload/blob/main/templates/ecommerce). Use it to power e-commerce businesses and online stores of all sizes. This repo includes a fully-working backend, enterprise-grade admin panel, and a beautifully designed, production-ready website.
 
