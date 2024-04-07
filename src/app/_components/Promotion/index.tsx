@@ -12,7 +12,7 @@ const Promotion = () => {
     seconds: 0,
   })
 
-  // Memoize the targetDate initialization to prevent it from changing on every render
+  // Memoize the targetDate initialization
   const targetDate = useMemo(() => new Date().setDate(new Date().getDate() + 3), [])
 
   useEffect(() => {
@@ -29,12 +29,11 @@ const Promotion = () => {
 
       if (timeDifference === 0) {
         clearInterval(timerInterval)
-        // You can add code here to handle what happens when the target date is reached.
       }
     }, 1000)
 
     return () => {
-      clearInterval(timerInterval) // Cleanup the interval when the component unmounts.
+      clearInterval(timerInterval) 
     }
   }, [targetDate])
   return (
