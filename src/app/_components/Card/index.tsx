@@ -39,6 +39,7 @@ export const Card: React.FC<{
   title?: string
   relationTo?: 'products'
   doc?: Product
+  index?: number
 }> = props => {
   const {
     showCategories,
@@ -46,6 +47,7 @@ export const Card: React.FC<{
     doc,
     doc: { slug, title, categories, meta, priceJSON } = {},
     className,
+    index,
   } = props
 
   const { description, image: metaImage } = meta || {}
@@ -65,7 +67,7 @@ export const Card: React.FC<{
   }, [priceJSON])
 
   return (
-    <Link href={href} className={[classes.card, className].filter(Boolean).join(' ')}>
+    <Link key={index} href={href} className={[classes.card, className].filter(Boolean).join(' ')}>
       <div className={classes.mediaWrapper}>
         {!metaImage && <div className={classes.placeholder}>No image</div>}
         {metaImage && typeof metaImage !== 'string' && (
