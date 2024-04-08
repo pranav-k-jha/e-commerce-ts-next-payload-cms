@@ -57,13 +57,13 @@ export const ProductHero: React.FC<{
           <p className={classes.stock}>In Stock</p>
         </div>
 
-      <Price product={product} button={false} />
-      <div className={classes.description}>
-        <h6>Description</h6>
-        <p>{description}</p>
-      </div>
+        <Price product={product} button={false} />
+        <div className={classes.description}>
+          <h6>Description</h6>
+          <p>{description}</p>
+        </div>
 
-      <AddToCartButton product={product} className={classes.addToCartButton} />
+        <AddToCartButton product={product} className={classes.addToCartButton} />
       </div>
     </Gutter>
   )
