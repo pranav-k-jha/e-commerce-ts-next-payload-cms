@@ -85,7 +85,9 @@ export async function generateMetadata({ params: { slug } }): Promise<Metadata> 
       slug,
       draft: isDraftMode,
     })
-  } catch (error) {}
+  } catch (error) {
+    error
+  }
 
   return generateMeta({ doc: product })
 }

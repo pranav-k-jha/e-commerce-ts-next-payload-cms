@@ -142,7 +142,6 @@ export const CollectionArchive: React.FC<Props> = props => {
             }
           }
         } catch (err) {
-          console.warn(err) // eslint-disable-line no-console
           setIsLoading(false)
           setError(`Unable to load "${relationTo} archive" data at this time.`)
         }
@@ -178,7 +177,7 @@ export const CollectionArchive: React.FC<Props> = props => {
         <div className={classes.grid}>
           {results.docs?.map((result, index) => {
             if (typeof result === 'object' && result !== null) {
-              return <Card doc={result} relationTo={relationTo} showCategories />
+              return <Card key={index} doc={result} relationTo={relationTo} showCategories />
             }
 
             return null
