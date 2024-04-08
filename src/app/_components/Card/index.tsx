@@ -25,9 +25,7 @@ const priceFromJSON = (priceJSON): string => {
             : parsed.recurring.interval
         }`
       }
-    } catch (e) {
-   
-    }
+    } catch (e) {}
   }
 
   return price
