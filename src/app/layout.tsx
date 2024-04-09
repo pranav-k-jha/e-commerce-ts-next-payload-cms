@@ -1,5 +1,6 @@
 import React from 'react'
 import { Metadata } from 'next'
+import { ErrorBoundary } from 'next/dist/client/components/error-boundary'
 import { Jost } from 'next/font/google'
 
 import { AdminBar } from './_components/AdminBar'
@@ -10,7 +11,6 @@ import { InitTheme } from './_providers/Theme/InitTheme'
 import { mergeOpenGraph } from './_utilities/mergeOpenGraph'
 
 import './_css/app.scss'
-import { ErrorBoundary } from 'next/dist/client/components/error-boundary'
 
 const jost = Jost({
   subsets: ['latin'],
