@@ -9,7 +9,9 @@ export async function Header() {
 
   try {
     header = await fetchHeader()
-  } catch (error) {error}
+  } catch (error) {
+    error
+  }
 
   return (
     <>
