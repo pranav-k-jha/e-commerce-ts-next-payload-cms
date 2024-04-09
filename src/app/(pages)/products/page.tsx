@@ -37,7 +37,6 @@ const Products = async () => {
       </Gutter>
       <HR />
     </div>
-    
   )
 }
 
