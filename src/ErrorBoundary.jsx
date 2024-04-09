@@ -11,7 +11,7 @@ class ErrorBoundary extends React.Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    if (error.digest === '2085880501') {
+    if (error.digest === '4142690402') {
       // Ignore the specific error
       this.setState({ hasError: false })
     } else {
