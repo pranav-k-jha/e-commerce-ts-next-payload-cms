@@ -142,6 +142,7 @@ export const CollectionArchive: React.FC<Props> = props => {
             }
           }
         } catch (err) {
+          err
           setIsLoading(false)
           setError(`Unable to load "${relationTo} archive" data at this time.`)
         }
