@@ -1,6 +1,5 @@
 import React from 'react'
 import { Metadata } from 'next'
-import { ErrorBoundary } from 'next/dist/client/components/error-boundary'
 import { Jost } from 'next/font/google'
 
 import { AdminBar } from './_components/AdminBar'
@@ -11,38 +10,31 @@ import { InitTheme } from './_providers/Theme/InitTheme'
 import { mergeOpenGraph } from './_utilities/mergeOpenGraph'
 
 import './_css/app.scss'
-
 const jost = Jost({
   subsets: ['latin'],
   weight: ['400', '700'],
   variable: '--font-jost',
 })
-// Define an error component to be used by ErrorBoundary
-const ErrorComponent: React.FC = () => (
-  <div style={{ color: 'red', fontSize: '20px' }}>An error occurred. Please try again later.</div>
-)
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <ErrorBoundary errorComponent={ErrorComponent}>
-      <html lang="en" suppressHydrationWarning>
-        <head>
-          <InitTheme />
-          <link rel="icon" href="/favicon.ico" sizes="32x32" />
-          <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        </head>
-        <body className={jost.variable}>
-          <Providers>
-            <AdminBar />
-            {/* @ts-expect-error */}
-            <Header />
-            <main className="main">{children}</main>
-            {/* @ts-expect-error */}
-            <Footer />
-          </Providers>
-        </body>
-      </html>
-    </ErrorBoundary>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <InitTheme />
+        <link rel="icon" href="/favicon.ico" sizes="32x32" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+      </head>
+      <body className={jost.variable}>
+        <Providers>
+          <AdminBar />
+          {/* @ts-expect-error */}
+          <Header />
+          <main className="main">{children}</main>
+          {/* @ts-expect-error */}
+          <Footer />
+        </Providers>
+      </body>
+    </html>
   )
 }
 
