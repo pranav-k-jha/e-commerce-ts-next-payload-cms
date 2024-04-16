@@ -1,5 +1,7 @@
 # E-Commerce Webshop with Admin Dashboard using Next.js, Stripe, TypeScript, and Payload CMS
 
+<img width="1106" alt="Screenshot 2024-04-15 at 11 43 55 PM" src="https://github.com/pranav-k-jha/e-commerce-ts-next-payload-cms/assets/61943097/2b51e8be-5b75-4489-9ba7-c96b68d1a8fc">
+
 ## Introduction
 This project is an E-Commerce Webshop built using Next.js, Stripe for payment processing, TypeScript for type safety, and Payload CMS for content management. It includes an Admin Dashboard for managing products, orders, and other aspects of the store.
 
@@ -26,3 +28,9 @@ This project is an E-Commerce Webshop built using Next.js, Stripe for payment pr
 
 ## License
 This project is licensed under the MIT License 
+
+<img width="1099" alt="Screenshot 2024-04-15 at 11 46 07 PM" src="https://github.com/pranav-k-jha/e-commerce-ts-next-payload-cms/assets/61943097/07f3510c-d393-4bc6-a086-cc327e1a0efc">
+<img width="1105" alt="Screenshot 2024-04-15 at 11 45 40 PM" src="https://github.com/pranav-k-jha/e-commerce-ts-next-payload-cms/assets/61943097/adb0ed85-10ec-4287-8cc1-f34684a15f82">
+<img width="1104" alt="Screenshot 2024-04-15 at 11 44 43 PM" src="https://github.com/pranav-k-jha/e-commerce-ts-next-payload-cms/assets/61943097/fceb8c80-04a8-49a7-b876-906554f69797">
+<img width="1100" alt="Screenshot 2024-04-15 at 11 44 20 PM" src="https://github.com/pranav-k-jha/e-commerce-ts-next-payload-cms/assets/61943097/ad0ef79e-f65f-465a-8c28-aa717209459c">
+<img width="1103" alt="Screenshot 2024-04-15 at 11 44 05 PM" src="https://github.com/pranav-k-jha/e-commerce-ts-next-payload-cms/assets/61943097/b3d58977-edbc-4f65-8700-8474cf7ef371">
